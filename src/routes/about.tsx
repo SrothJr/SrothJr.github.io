@@ -43,10 +43,13 @@ function AboutPage() {
           className="aspect-square w-full max-w-[200px] rounded-lg border border-border object-cover grayscale transition-all hover:grayscale-0"
         />
         <div className="space-y-4 text-muted-foreground">
-          <p>Passionate Computer Science student with hands-on experience in full-stack MERN development, Artificial Intel-
-ligence, and Natural Language Processing. Adept at applying machine learning algorithms, transformer models,
-and software engineering principles to solve complex, real-world problems. Seeking opportunities to drive data-
-informed decision-making and build innovative AI tools.</p>
+          <p>
+            Passionate Computer Science student with hands-on experience in full-stack MERN
+            development, Artificial Intelligence, and Natural Language Processing. Adaptive to
+            applying machine learning algorithms, transformer models, and software engineering
+            principles to solve complex real-world problems. Looking for opportunities to work at
+            the architectural level and build useful tools.
+          </p>
         </div>
       </div>
 
