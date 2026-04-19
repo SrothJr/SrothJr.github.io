@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, Github, Linkedin, Globe, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, MapPin, ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
 import { site } from "@/lib/site";
 
@@ -27,7 +27,6 @@ function ContactPage() {
     { icon: Phone, label: "Phone", value: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}` },
     { icon: Linkedin, label: "LinkedIn", value: site.socials.linkedin, href: site.socials.linkedin },
     { icon: Github, label: "GitHub", value: site.socials.github, href: site.socials.github },
-    { icon: Globe, label: "Website", value: site.socials.website, href: site.socials.website },
   ];
 
   return (
@@ -71,10 +70,6 @@ function ContactPage() {
         ))}
       </ul>
 
-      <p className="mt-8 font-mono text-xs text-muted-foreground">
-        <span className="text-primary">//</span> contact details are placeholders — update them in{" "}
-        <code>src/lib/site.ts</code>.
-      </p>
     </div>
   );
 }

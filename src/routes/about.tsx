@@ -30,7 +30,7 @@ function AboutPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <SectionLabel>about</SectionLabel>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Engineer, mentor, photographer.
+        AI Enthusiast, Full-Stack Developer, Software Engineer.
       </h1>
 
       <div className="mt-10 grid gap-10 md:grid-cols-[200px_1fr] md:items-start">
@@ -43,13 +43,10 @@ function AboutPage() {
           className="aspect-square w-full max-w-[200px] rounded-lg border border-border object-cover grayscale transition-all hover:grayscale-0"
         />
         <div className="space-y-4 text-muted-foreground">
-          <p>{site.pitch}</p>
-          <p>
-            I'm currently a Software Development Engineer Intern at <span className="text-foreground">uSavior</span>,
-            where I get to explore frameworks for advanced web applications and design solutions
-            from scratch. Outside the editor, I lead youth programs and chase light through a
-            camera.
-          </p>
+          <p>Passionate Computer Science student with hands-on experience in full-stack MERN development, Artificial Intel-
+ligence, and Natural Language Processing. Adept at applying machine learning algorithms, transformer models,
+and software engineering principles to solve complex, real-world problems. Seeking opportunities to drive data-
+informed decision-making and build innovative AI tools.</p>
         </div>
       </div>
 

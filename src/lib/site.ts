@@ -9,13 +9,11 @@ export const site = {
     "I'm extremely passionate about computer science. I love learning something new every day, applying it, and then teaching it to someone else in an easier way.",
   resumeUrl: "/Md_Nazim_Hossain_CV.pdf",
   url: "https://example.com", // replace with deployed URL
-  // Replace these placeholders with the real ones whenever you're ready:
-  email: "your.email@example.com",
-  phone: "+880 1XXX-XXXXXX",
+  email: "nazimhossain14602@gmail.com",
+  phone: "+8801878912707",
   socials: {
-    github: "https://github.com/your-handle",
-    linkedin: "https://linkedin.com/in/your-handle",
-    website: "https://your-site.com",
+    github: "https://github.com/SrothJr",
+    linkedin: "https://www.linkedin.com/in/md-nazim-hossain/",
   },
 } as const;
 
@@ -33,6 +31,7 @@ export const projects: Project[] = [
     description:
       "A cross-platform AI-enriched gardening assistant with integrated AR features. Handles task management, care instructions, and weather-based precautions so gardeners can focus on the art.",
     tools: ["React Native", "Expo", "MERN", "MongoDB", "MVC"],
+    link: "https://github.com/SrothJr/gardeniAR",
     featured: true,
   },
   {
@@ -40,6 +39,7 @@ export const projects: Project[] = [
     description:
       "A subscription-based meal solution connecting conscious consumers with talented home chefs. A platform for skilled cooks to turn their craft into secure earnings.",
     tools: ["MERN", "MongoDB", "MVC"],
+    link: "https://github.com/SrothJr/meal-sync",
     featured: true,
   },
   {
@@ -47,6 +47,7 @@ export const projects: Project[] = [
     description:
       "A university help-desk site for students — resources, course reviews, and Q&A. I led the team for this group project.",
     tools: ["HTML", "CSS", "PHP", "MySQL"],
+    link: "https://github.com/SrothJr/student-help-desk",
     featured: true,
   },
   {
@@ -54,24 +55,28 @@ export const projects: Project[] = [
     description:
       "Scrapes a selected Google Drive folder for updates and pushes notifications to a Discord channel in real time.",
     tools: ["JavaScript", "Google Drive API v3", "Discord Bot"],
+    link: "https://github.com/SrothJr/Drive-Scraper",
   },
   {
     name: "Another NoteApp",
     description:
       "Yet another note app — but with a clean UI and full deployment via Render. Built as a learning project for the MERN stack and MVC architecture.",
     tools: ["MERN", "TailwindCSS", "MVC"],
+    link: "https://github.com/SrothJr/another-noteApp",
   },
   {
     name: "Pig Game",
     description:
       "A small dice game built while learning JavaScript. Followed a tutorial and applied my own optimizations afterward.",
     tools: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/SrothJr/Pig-Game",
   },
   {
     name: "My First Website",
     description:
       "The personal site I built for myself back in 2020 using raw HTML and CSS — where it all started.",
     tools: ["HTML", "CSS"],
+    link: "https://github.com/SrothJr/My-Website",
   },
 ];
 

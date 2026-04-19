@@ -31,8 +31,7 @@ function ProjectsPage() {
         Things I've built.
       </h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        A mix of full-stack apps, side experiments, and learning projects. Project links are
-        placeholders for now — swap them in <code className="font-mono text-xs">src/lib/site.ts</code>.
+        A mix of full-stack apps, side experiments, and learning projects.
       </p>
 
       <ul className="mt-10 grid gap-4 sm:grid-cols-2">

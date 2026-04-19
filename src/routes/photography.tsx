@@ -10,7 +10,7 @@ export const Route = createFileRoute("/photography")({
       {
         name: "description",
         content:
-          "A growing visual diary by Md Nazim Hossain — frames from Dhaka and beyond. Swap placeholders with your own photos.",
+          "A visual diary by Md Nazim Hossain — frames from Dhaka and beyond.",
       },
       { property: "og:title", content: "Photography — Md Nazim Hossain" },
       {
@@ -22,17 +22,14 @@ export const Route = createFileRoute("/photography")({
   component: PhotographyPage,
 });
 
-// Placeholder photos — replace these URLs with your own images later.
 const photos = [
-  { id: 1, src: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80", alt: "Forest light" },
-  { id: 2, src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80", alt: "Mountain sunrise" },
-  { id: 3, src: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&q=80", alt: "Ocean waves" },
-  { id: 4, src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=1200&q=80", alt: "Mountain valley" },
-  { id: 5, src: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1200&q=80", alt: "Forest path" },
-  { id: 6, src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&q=80", alt: "Tree silhouette" },
-  { id: 7, src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80", alt: "Field at dusk" },
-  { id: 8, src: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&q=80", alt: "Cabin in snow" },
-  { id: 9, src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80", alt: "Forest canopy" },
+  { id: 1, src: "https://i.imgur.com/KWy1F5T.jpeg", alt: "Art Gallary Bamboo art" },
+  { id: 2, src: "https://i.imgur.com/pq1lRVr.jpeg", alt: "Elephent raoming market and collecting tax" },
+  { id: 3, src: "https://i.imgur.com/ZMij41L.jpeg", alt: "Boy crossing bamboo bridge Black and white" },
+  { id: 4, src: "https://i.imgur.com/7pORa6T.jpeg", alt: "Water lily" },
+  { id: 5, src: "https://i.imgur.com/BrYGRod.jpeg", alt: "Cityscape Dhaka" },
+  { id: 6, src: "https://i.imgur.com/kztC7a3.jpeg", alt: "Sylhet River" },
+  { id: 7, src: "https://i.imgur.com/jCfl2la.jpeg", alt: "A flowering Tree" },
 ];
 
 function PhotographyPage() {
@@ -60,8 +57,7 @@ function PhotographyPage() {
         Frames between commits.
       </h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        A visual side project. Click any frame to view it larger. These are placeholder images — swap them in
-        <code className="ml-1 font-mono text-xs">src/routes/photography.tsx</code>.
+        A visual side project. Click any frame to view it larger.
       </p>
 
       <ul className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3">
