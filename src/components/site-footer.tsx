@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Globe } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -27,15 +27,6 @@ export function SiteFooter() {
             className="rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <Linkedin className="h-4 w-4" />
-          </a>
-          <a
-            href={site.socials.website}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Website"
-            className="rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            <Globe className="h-4 w-4" />
           </a>
           <a
             href={`mailto:${site.email}`}
