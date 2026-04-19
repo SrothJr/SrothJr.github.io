@@ -8,7 +8,7 @@ export const site = {
   pitch:
     "I'm extremely passionate about computer science. I love learning something new every day, applying it, and then teaching it to someone else in an easier way.",
   resumeUrl: "/Md_Nazim_Hossain_CV.pdf",
-  url: "https://example.com", // replace with deployed URL
+  url: "https://SrothJr.github.io",
   email: "nazimhossain14602@gmail.com",
   phone: "+8801878912707",
   socials: {
