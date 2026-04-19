@@ -7,7 +7,7 @@ export const site = {
   location: "Dhaka, Bangladesh",
   pitch:
     "I'm extremely passionate about computer science. I love learning something new every day, applying it, and then teaching it to someone else in an easier way.",
-  resumeUrl: "/Md_Nazim_Hossain_CV.pdf",
+  resumeUrl: "/Single_Page_CV_Md_Nazim_Hossain[april-2026].pdf",
   url: "https://SrothJr.github.io",
   email: "nazimhossain14602@gmail.com",
   phone: "+8801878912707",
