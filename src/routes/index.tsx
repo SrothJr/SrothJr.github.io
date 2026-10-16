@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, MapPin } from "lucide-react";
+import { ArrowRight, Download, ExternalLink, MapPin } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
 import { site, projects, skills } from "@/lib/site";
 
@@ -120,11 +120,11 @@ function HomePage() {
           {featured.map((p) => (
             <li
               key={p.name}
-              className="group relative rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/50"
+              className="group relative flex flex-col rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/50"
             >
               <p className="font-mono text-xs text-muted-foreground">project</p>
               <h3 className="mt-1 text-lg font-semibold tracking-tight">{p.name}</h3>
-              <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{p.description}</p>
+              <p className="mt-2 flex-1 line-clamp-3 text-sm text-muted-foreground">{p.description}</p>
               <ul className="mt-4 flex flex-wrap gap-1.5">
                 {p.tools.slice(0, 4).map((t) => (
                   <li
@@ -135,6 +135,29 @@ function HomePage() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-4 flex items-center gap-1 border-t border-border pt-3">
+                {p.demo && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Live Demo"
+                    className="rounded-md px-2 py-1 font-mono text-[10px] text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
+                  >
+                    demo ↗
+                  </a>
+                )}
+                <a
+                  href={p.link ?? site.socials.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="GitHub"
+                  aria-label={`Open ${p.name} on GitHub`}
+                  className="ml-auto rounded-md p-1 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
             </li>
           ))}
         </ul>

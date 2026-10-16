@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionLabel } from "@/components/section-label";
-import { site, education, experience, technologies } from "@/lib/site";
+import { site, education, priorEducation, experience, technologies } from "@/lib/site";
 import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -56,31 +56,51 @@ function AboutPage() {
       {/* Education */}
       <section className="mt-16">
         <SectionLabel>education</SectionLabel>
-        <div className="mt-4 rounded-lg border border-border bg-card p-6">
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <h2 className="text-lg font-semibold">{education.school}</h2>
-            <p className="font-mono text-xs text-muted-foreground">{education.period}</p>
-          </div>
-          <p className="mt-1 text-sm text-muted-foreground">{education.degree}</p>
-          <p className="mt-2 text-sm">
-            <span className="text-primary font-mono text-xs">CGPA</span>{" "}
-            <span className="font-medium">{education.cgpa}</span>
-          </p>
-          <div className="mt-5">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              coursework
+        <div className="mt-4 space-y-4">
+          {/* University */}
+          <div className="rounded-lg border border-border bg-card p-6">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h2 className="text-lg font-semibold">{education.school}</h2>
+              <p className="font-mono text-xs text-muted-foreground">{education.period}</p>
+            </div>
+            <p className="mt-1 text-sm text-muted-foreground">{education.degree}</p>
+            <p className="mt-2 text-sm">
+              <span className="text-primary font-mono text-xs">CGPA</span>{" "}
+              <span className="font-medium">{education.cgpa}</span>
             </p>
-            <ul className="mt-2 flex flex-wrap gap-1.5">
-              {education.coursework.map((c) => (
-                <li
-                  key={c}
-                  className="rounded border border-border px-2 py-0.5 font-mono text-[11px] text-muted-foreground"
-                >
-                  {c}
-                </li>
-              ))}
-            </ul>
+            <div className="mt-5">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                coursework
+              </p>
+              <ul className="mt-2 flex flex-wrap gap-1.5">
+                {education.coursework.map((c) => (
+                  <li
+                    key={c}
+                    className="rounded border border-border px-2 py-0.5 font-mono text-[11px] text-muted-foreground"
+                  >
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
+          {/* HSC & SSC */}
+          {priorEducation.map((e) => (
+            <div key={e.school} className="rounded-lg border border-border bg-card p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h2 className="text-lg font-semibold">{e.school}</h2>
+                <p className="font-mono text-xs text-muted-foreground">{e.period}</p>
+              </div>
+              <p className="mt-1 text-sm text-muted-foreground">{e.degree}</p>
+              <p className="mt-1 font-mono text-xs text-muted-foreground">{e.location}</p>
+              <p className="mt-2 text-sm">
+                <span className="text-primary font-mono text-xs">GPA</span>{" "}
+                <span className="font-medium">{e.gpa}</span>
+                <span className="ml-3 font-mono text-xs text-muted-foreground">Group: {e.group}</span>
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

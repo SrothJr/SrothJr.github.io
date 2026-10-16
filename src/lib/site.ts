@@ -6,7 +6,7 @@ export const site = {
   tagline: "CSE Graduate · Brac University · MERN · AI/NLP",
   location: "Dhaka, Bangladesh",
   pitch:
-    "I'm extremely passionate about computer science. I love learning something new every day, applying it, and then teaching it to someone else in an easier way.",
+    "CS graduate with hands-on experience in full-stack MERN development, AI, and Natural Language Processing. I apply transformer models and software engineering principles to build real-world solutions — always looking for opportunities to work at the architectural level.",
   resumeUrl: "/Reformated_Single_Page_CV_Md_Nazim_Hossain.pdf",
   cvUrl: "/Reformated_Multi_page_CV_Md_Nazim_Hossain.pdf",
   url: "https://SrothJr.github.io",
@@ -68,6 +68,7 @@ export const projects: Project[] = [
     tools: ["Python", "PyTorch", "Hugging Face", "BERT", "RoBERTa", "Scikit-learn"],
     link: "https://github.com/SrothJr/song-lyrics-genre-nlp",
     demo: "https://huggingface.co/spaces/SrothJr/lyrics-genre-predictor",
+    featured: true,
   },
   {
     name: "hyprGesture",
@@ -75,6 +76,7 @@ export const projects: Project[] = [
       "Touchless Linux desktop controller interfacing an Arduino UNO and PAJ7620 sensor with the Hyprland window manager. Built a Python serial listener with non-blocking cooldown timing and async process management to execute 27 gesture commands across 3 operational modes.",
     tools: ["Python", "C++", "Arduino", "PySerial", "I2C", "Linux"],
     link: "https://github.com/SrothJr/hyprGesture",
+    featured: true,
   },
   {
     name: "Drive Scraper",
@@ -209,3 +211,22 @@ export const education = {
     "Introduction to Robotics",
   ],
 };
+
+export const priorEducation = [
+  {
+    school: "Birshreshtha Munshi Abdur Rouf Public College",
+    degree: "Higher Secondary Certificate (HSC)",
+    period: "2019 — 2021",
+    gpa: "5.00 / 5.00",
+    group: "Science",
+    location: "Peelkhana, Dhaka",
+  },
+  {
+    school: "Willes Little Flower School And College",
+    degree: "Secondary School Certificate (SSC)",
+    period: "2017 — 2019",
+    gpa: "5.00 / 5.00",
+    group: "Science",
+    location: "Kakrail, Dhaka",
+  },
+];
