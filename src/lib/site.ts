@@ -24,6 +24,10 @@ export type Project = {
   tools: string[];
   link?: string;
   demo?: string;
+  award?: {
+    title: string;
+    link: string;
+  };
   featured?: boolean;
 };
 
@@ -31,8 +35,8 @@ export const projects: Project[] = [
   {
     name: "NLP-Based Mental Health Detection",
     description:
-      "Undergraduate thesis at Brac University. Engineered a low-resource Bangla NLP framework achieving 87.20% weighted F1-score for depression severity classification. Used a decoupled LLM synthetic augmentation scheme (Qwen3-32B) during DAPT/TAPT and built a SigLIP cross-attention multimodal extension.",
-    tools: ["Python", "PyTorch", "Hugging Face", "Qwen3-32B", "DAPT/TAPT", "LIME", "SHAP"],
+      "Undergraduate thesis at Brac University. Engineered a low-resource Bangla NLP framework achieving 87.20% weighted F1-score for depression severity classification. Designed a decoupled LLM synthetic augmentation scheme (Qwen3-32B) during DAPT/TAPT, built a SigLIP cross-attention multimodal extension, and validated with LIME/SHAP explainability.",
+    tools: ["Python", "PyTorch", "Hugging Face", "Qwen3-32B", "SigLIP", "DAPT/TAPT", "LIME", "SHAP"],
     link: "https://github.com/SrothJr",
     demo: "https://huggingface.co/spaces/SrothJr/bangla-depression-severity-classifier",
     featured: true,
@@ -40,23 +44,27 @@ export const projects: Project[] = [
   {
     name: "GardeniAR",
     description:
-      "A cross-platform AI-enriched gardening assistant with integrated AR features. Handles task management, care instructions, and weather-based precautions so gardeners can focus on the art.",
-    tools: ["React Native", "Expo", "MERN", "MongoDB", "MVC"],
+      "A cross-platform AI-enriched gardening assistant with integrated AR features and dual-mode AR Weed Identification (Gemini Multimodal + React-Webcam) for real-time invasive species detection. Awarded 2nd Runners Up at the CSE471 Project Demonstration, Brac University.",
+    tools: ["React Native", "Expo", "MERN", "MongoDB", "Gemini Multimodal", "MVC"],
     link: "https://github.com/SrothJr/gardeniAR",
+    award: {
+      title: "2nd Runners Up — CSE471 Project Demonstration",
+      link: "https://www.bracu.ac.bd/news/brac-university-hosts-cse471-project-showcase-fall-2025",
+    },
     featured: true,
   },
   {
     name: "Meal Sync",
     description:
-      "A subscription-based meal solution connecting conscious consumers with talented home chefs. A platform for skilled cooks to turn their craft into secure earnings.",
-    tools: ["MERN", "MongoDB", "MVC"],
+      "A dynamic meal subscription platform connecting conscious consumers and bachelors with talented home chefs for regular homemade meals, providing skilled cooks a platform to turn their craft into secure earnings.",
+    tools: ["MERN", "MongoDB", "Express.js", "React", "Node.js", "MVC"],
     link: "https://github.com/SrothJr/meal-sync",
     featured: true,
   },
   {
     name: "Student Help Desk",
     description:
-      "A university help-desk site for students — resources, course reviews, and Q&A. I led the team for this group project.",
+      "A university help-desk platform for students — academic resources, course reviews, and peer Q&A. Led the development team for this university project.",
     tools: ["HTML", "CSS", "PHP", "MySQL"],
     link: "https://github.com/SrothJr/student-help-desk",
     featured: true,
@@ -73,22 +81,22 @@ export const projects: Project[] = [
   {
     name: "hyprGesture",
     description:
-      "Touchless Linux desktop controller interfacing an Arduino UNO and PAJ7620 sensor with the Hyprland window manager. Built a Python serial listener with non-blocking cooldown timing and async process management to execute 27 gesture commands across 3 operational modes.",
-    tools: ["Python", "C++", "Arduino", "PySerial", "I2C", "Linux"],
+      "A touchless gesture control system integrating an Arduino UNO and PAJ7620 sensor to seamlessly control a Linux desktop environment (Hyprland) across 3 operational modes. Built a continuous Python daemon running asynchronous shell subprocesses.",
+    tools: ["Python", "C++", "Arduino", "PAJ7620", "PySerial", "Hyprland", "Linux"],
     link: "https://github.com/SrothJr/hyprGesture",
     featured: true,
   },
   {
     name: "Drive Scraper",
     description:
-      "Scrapes a selected Google Drive folder for updates and pushes notifications to a Discord channel in real time.",
+      "Software to scrape a selected Google Drive folder for file updates in real time and automatically dispatch alerts to a Discord channel.",
     tools: ["JavaScript", "Google Drive API v3", "Discord Bot"],
     link: "https://github.com/SrothJr/Drive-Scraper",
   },
   {
     name: "Another NoteApp",
     description:
-      "Yet another note app — but with a clean UI and full deployment via Render. Built as a learning project for the MERN stack and MVC architecture.",
+      "A sleek note-taking web application with a clean UI, fully deployed on Render. Built as a focused implementation of the MERN stack and MVC architecture.",
     tools: ["MERN", "TailwindCSS", "MVC"],
     link: "https://github.com/SrothJr/another-noteApp",
   },
@@ -192,7 +200,9 @@ export const education = {
   school: "Brac University",
   degree: "B.Sc. in Computer Science and Engineering",
   period: "Sept 2022 — Oct 2026",
-  cgpa: "3.78 / 4.00 overall · 3.90 / 4.00 CSE major (Graduated: Summer 2026)",
+  cgpa: "3.78 / 4.00",
+  majorCgpa: "3.90 / 4.00",
+  status: "Graduated: Summer 2026",
   coursework: [
     "Data Structures",
     "Algorithm Analysis & Design",
@@ -230,3 +240,15 @@ export const priorEducation = [
     location: "Kakrail, Dhaka",
   },
 ];
+
+export const awards = [
+  {
+    title: "2nd Runners Up — CSE471 Project Demonstration",
+    organization: "Brac University",
+    date: "Fall 2025",
+    description:
+      "Awarded for 'GardeniAR', an AI-enriched cross-platform gardening assistant featuring dual-mode AR Weed Identification using Gemini Multimodal.",
+    link: "https://www.bracu.ac.bd/news/brac-university-hosts-cse471-project-showcase-fall-2025",
+  },
+];
+

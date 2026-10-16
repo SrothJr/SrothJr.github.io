@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, ExternalLink, MapPin } from "lucide-react";
+import { ArrowRight, Download, ExternalLink, MapPin, Trophy } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
 import { site, projects, skills } from "@/lib/site";
 
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "MERN-stack engineer & CSE student at Brac University. Currently building at uSavior. Photographer on the side.",
+          "Full-stack MERN & AI/NLP engineer, CSE graduate from Brac University. Portfolio, research thesis, and software projects.",
       },
       { property: "og:title", content: "Md Nazim Hossain — Software Engineer" },
       {
@@ -136,6 +136,18 @@ function HomePage() {
                 ))}
               </ul>
               <div className="mt-4 flex items-center gap-1 border-t border-border pt-3">
+                {p.award && (
+                  <a
+                    href={p.award.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    title={p.award.title}
+                    className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 font-mono text-[10px] text-amber-500 transition-colors hover:bg-secondary hover:text-amber-400"
+                  >
+                    <Trophy className="h-3 w-3" />
+                    <span>award ↗</span>
+                  </a>
+                )}
                 {p.demo && (
                   <a
                     href={p.demo}

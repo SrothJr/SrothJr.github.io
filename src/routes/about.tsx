@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ExternalLink, Trophy } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
-import { site, education, priorEducation, experience, technologies } from "@/lib/site";
+import { site, education, priorEducation, experience, technologies, awards } from "@/lib/site";
 import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -10,7 +11,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "About Md Nazim Hossain — CSE at Brac University (CGPA 3.72), software engineer, and youth-development advocate.",
+          "About Md Nazim Hossain — CSE Graduate at Brac University (CGPA 3.78), software engineer, and youth-development advocate.",
       },
       { property: "og:title", content: "About — Md Nazim Hossain" },
       {
@@ -64,10 +65,22 @@ function AboutPage() {
               <p className="font-mono text-xs text-muted-foreground">{education.period}</p>
             </div>
             <p className="mt-1 text-sm text-muted-foreground">{education.degree}</p>
-            <p className="mt-2 text-sm">
-              <span className="text-primary font-mono text-xs">CGPA</span>{" "}
-              <span className="font-medium">{education.cgpa}</span>
-            </p>
+            <div className="mt-2.5 flex flex-wrap items-baseline gap-x-2.5 gap-y-1 text-sm">
+              <p>
+                <span className="text-primary font-mono text-xs">CGPA</span>{" "}
+                <span className="font-medium text-foreground">{education.cgpa}</span>
+              </p>
+              {education.majorCgpa && (
+                <span className="inline-flex items-center rounded border border-dashed border-border px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground">
+                  Major: {education.majorCgpa}
+                </span>
+              )}
+              {education.status && (
+                <span className="font-mono text-xs text-muted-foreground">
+                  · {education.status}
+                </span>
+              )}
+            </div>
             <div className="mt-5">
               <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 coursework
@@ -130,6 +143,36 @@ function AboutPage() {
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* Awards & Honors */}
+      <section className="mt-16">
+        <SectionLabel>honors_and_awards</SectionLabel>
+        <div className="mt-4 space-y-4">
+          {awards.map((a) => (
+            <div key={a.title} className="rounded-lg border border-border bg-card p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <Trophy className="h-4 w-4 text-amber-500" />
+                  <h3 className="text-base font-semibold">{a.title}</h3>
+                </div>
+                <p className="font-mono text-xs text-muted-foreground">{a.date}</p>
+              </div>
+              <p className="mt-1 text-sm text-muted-foreground">{a.organization}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{a.description}</p>
+              {a.link && (
+                <a
+                  href={a.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 font-mono text-xs text-primary hover:underline"
+                >
+                  Official Announcement <ExternalLink className="h-3 w-3" />
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Technologies */}

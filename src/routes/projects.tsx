@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Trophy } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
 import { projects, site } from "@/lib/site";
 
@@ -48,6 +48,19 @@ function ProjectsPage() {
                   <h2 className="mt-1 text-lg font-semibold tracking-tight">{p.name}</h2>
                 </div>
               <div className="flex items-center gap-1">
+                  {p.award && (
+                    <a
+                      href={p.award.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={p.award.title}
+                      title={p.award.title}
+                      className="inline-flex items-center gap-1 rounded-md p-1.5 font-mono text-[10px] text-amber-500 transition-colors hover:text-amber-400 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      <Trophy className="h-3.5 w-3.5" />
+                      <span>award ↗</span>
+                    </a>
+                  )}
                   {p.demo && (
                     <a
                       href={p.demo}
