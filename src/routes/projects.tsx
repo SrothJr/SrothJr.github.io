@@ -47,15 +47,30 @@ function ProjectsPage() {
                   <p className="font-mono text-xs text-primary">{num}</p>
                   <h2 className="mt-1 text-lg font-semibold tracking-tight">{p.name}</h2>
                 </div>
-                <a
-                  href={p.link ?? site.socials.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${p.name}`}
-                  className="rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
+              <div className="flex items-center gap-1">
+                  {p.demo && (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Live demo of ${p.name}`}
+                      title="Live Demo"
+                      className="rounded-md p-1.5 font-mono text-[10px] text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      demo ↗
+                    </a>
+                  )}
+                  <a
+                    href={p.link ?? site.socials.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${p.name} on GitHub`}
+                    title="GitHub"
+                    className="rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
               <p className="mt-3 flex-1 text-sm text-muted-foreground">{p.description}</p>
               <ul className="mt-5 flex flex-wrap gap-1.5">

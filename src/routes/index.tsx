@@ -57,10 +57,17 @@ function HomePage() {
               </Link>
               <a
                 href={site.resumeUrl}
-                download
+                download="Md-Nazim-Hossain_Resume.pdf"
                 className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                <Download className="h-3.5 w-3.5" /> Download CV
+                <Download className="h-3.5 w-3.5" /> Resume
+              </a>
+              <a
+                href={site.cvUrl}
+                download="Md-Nazim-Hossain_CV.pdf"
+                className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                <Download className="h-3.5 w-3.5" /> Full CV
               </a>
               <Link
                 to="/contact"
@@ -78,16 +85,17 @@ function HomePage() {
         <div className="grid gap-6 md:grid-cols-3">
           <div className="md:col-span-1">
             <SectionLabel>currently</SectionLabel>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight">Building at uSavior</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight">Undergraduate Thesis</h2>
           </div>
           <div className="md:col-span-2">
             <p className="text-muted-foreground">
-              Software Development Engineer Intern — exploring frameworks for advanced web apps,
-              identifying problems solvable through known and modified algorithms, and shipping
-              scratch-built solutions.
+              Finalizing an undergraduate thesis on NLP-based mental health detection — building a
+              low-resource Bangla NLP framework for depression severity classification using transformer
+              models, DAPT/TAPT pretraining, and LIME/SHAP explainability. Achieved 87.20% weighted
+              F1-score.
             </p>
             <p className="mt-3 font-mono text-xs text-muted-foreground">
-              uSavior · Dhaka, BD · Jun 2024 — Now
+              Brac University · Dhaka, BD · Summer 2026 (Graduated)
             </p>
           </div>
         </div>

@@ -3,11 +3,12 @@ export const site = {
   name: "Md Nazim Hossain",
   shortName: "Nazim",
   role: "Software Development Engineer",
-  tagline: "CSE @ Brac University · MERN · MVC",
+  tagline: "CSE Graduate · Brac University · MERN · AI/NLP",
   location: "Dhaka, Bangladesh",
   pitch:
     "I'm extremely passionate about computer science. I love learning something new every day, applying it, and then teaching it to someone else in an easier way.",
-  resumeUrl: "/Single_Page_CV_Md_Nazim_Hossain[april-2026].pdf",
+  resumeUrl: "/Reformated_Single_Page_CV_Md_Nazim_Hossain.pdf",
+  cvUrl: "/Reformated_Multi_page_CV_Md_Nazim_Hossain.pdf",
   url: "https://SrothJr.github.io",
   email: "nazimhossain14602@gmail.com",
   phone: "+8801878912707",
@@ -22,10 +23,20 @@ export type Project = {
   description: string;
   tools: string[];
   link?: string;
+  demo?: string;
   featured?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    name: "NLP-Based Mental Health Detection",
+    description:
+      "Undergraduate thesis at Brac University. Engineered a low-resource Bangla NLP framework achieving 87.20% weighted F1-score for depression severity classification. Used a decoupled LLM synthetic augmentation scheme (Qwen3-32B) during DAPT/TAPT and built a SigLIP cross-attention multimodal extension.",
+    tools: ["Python", "PyTorch", "Hugging Face", "Qwen3-32B", "DAPT/TAPT", "LIME", "SHAP"],
+    link: "https://github.com/SrothJr",
+    demo: "https://huggingface.co/spaces/SrothJr/bangla-depression-severity-classifier",
+    featured: true,
+  },
   {
     name: "GardeniAR",
     description:
@@ -49,6 +60,21 @@ export const projects: Project[] = [
     tools: ["HTML", "CSS", "PHP", "MySQL"],
     link: "https://github.com/SrothJr/student-help-desk",
     featured: true,
+  },
+  {
+    name: "Song-Lyrics Genre Classification",
+    description:
+      "Built a 3-model soft-voting transformer ensemble (BERT, RoBERTa) in PyTorch and Hugging Face to classify 53K+ lyrics across 6 genres. Implemented class-weighted cross-entropy loss, achieving 0.56 Macro F1 at 0.66 accuracy. Deployed a live interactive demo on Hugging Face Spaces.",
+    tools: ["Python", "PyTorch", "Hugging Face", "BERT", "RoBERTa", "Scikit-learn"],
+    link: "https://github.com/SrothJr/song-lyrics-genre-nlp",
+    demo: "https://huggingface.co/spaces/SrothJr/lyrics-genre-predictor",
+  },
+  {
+    name: "hyprGesture",
+    description:
+      "Touchless Linux desktop controller interfacing an Arduino UNO and PAJ7620 sensor with the Hyprland window manager. Built a Python serial listener with non-blocking cooldown timing and async process management to execute 27 gesture commands across 3 operational modes.",
+    tools: ["Python", "C++", "Arduino", "PySerial", "I2C", "Linux"],
+    link: "https://github.com/SrothJr/hyprGesture",
   },
   {
     name: "Drive Scraper",
@@ -82,16 +108,16 @@ export const projects: Project[] = [
 
 export const skills = [
   {
+    title: "AI & Machine Learning",
+    body: "NLP, transformer models (BERT, LLMs), DAPT/TAPT pretraining, explainable AI (LIME, SHAP), PyTorch, and Hugging Face.",
+  },
+  {
     title: "Web Development",
-    body: "Full-stack MERN with MySQL and MongoDB, following MVC architecture.",
+    body: "Full-stack MERN with MySQL and MongoDB, following MVC architecture. React Native and Expo for mobile.",
   },
   {
     title: "Python",
     body: "OOP, data structures, and algorithm implementations. Data analysis, visualization, and computing with libraries.",
-  },
-  {
-    title: "JavaScript",
-    body: "ReactJS, DOM manipulation, web applications, and small software tools.",
   },
   {
     title: "Media",
@@ -105,22 +131,27 @@ export const technologies = [
   "C",
   "Python",
   "JavaScript",
+  "PHP",
+  "SQL",
   "MySQL",
   "MongoDB",
   "MERN",
   "React Native",
   "Expo",
+  "PyTorch",
+  "Hugging Face",
+  "Linux",
 ];
 
 export const experience = [
   {
-    role: "Software Development Engineer Intern",
+    role: "Software Engineering Trainee",
     org: "uSavior",
     location: "Dhaka, BD",
-    period: "Jun 2024 — Now",
+    period: "Jun 2024 — Jun 2025",
     points: [
-      "Exploring frameworks for advanced web apps and software development.",
-      "Recognizing problems solvable through known/modified algorithms and building scratch solutions.",
+      "Participated in technical discussions evaluating modern web architectures, algorithmic approaches, and full-stack development frameworks.",
+      "Analyzed real-world software design problems and collaborated on prototyping algorithmic solutions alongside senior developers.",
     ],
   },
   {
@@ -158,16 +189,23 @@ export const experience = [
 export const education = {
   school: "Brac University",
   degree: "B.Sc. in Computer Science and Engineering",
-  period: "Sept 2022 — Now",
-  cgpa: "3.72 / 4.0 (108 credits completed)",
+  period: "Sept 2022 — Oct 2026",
+  cgpa: "3.78 / 4.00 overall · 3.90 / 4.00 CSE major (Graduated: Summer 2026)",
   coursework: [
     "Data Structures",
     "Algorithm Analysis & Design",
+    "Operating Systems",
     "Computer Architecture",
     "Digital Logic Design",
     "Data Communications",
-    "Database Management",
+    "Computer Networks",
+    "Database Systems",
     "Software Engineering",
     "Artificial Intelligence",
+    "Natural Language Processing II",
+    "Compiler Design",
+    "VLSI Design",
+    "Computer Interfacing",
+    "Introduction to Robotics",
   ],
 };
